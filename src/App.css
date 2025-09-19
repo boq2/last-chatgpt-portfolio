@@ -429,6 +429,7 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  white-space: nowrap;
 }
 
 .chat-header h1 {
@@ -436,6 +437,7 @@ body {
   font-weight: 600;
   color: #ececf1;
   margin: 0;
+  white-space: nowrap;
 }
 
 .header-right {
@@ -1014,11 +1016,11 @@ body {
   position: absolute;
   top: 16px;
   right: 16px;
-  background: rgba(0, 0, 0, 0.7);
-  border: none;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   color: #ececf1;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
@@ -1029,7 +1031,8 @@ body {
 }
 
 .close-modal:hover {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.95);
+  border-color: rgba(255, 255, 255, 0.4);
   transform: scale(1.1);
 }
 
@@ -1914,6 +1917,20 @@ body {
   }
 }
 
+/* GPT Intro Message */
+.gpt-intro-message {
+  padding: 20px 20px 0 20px;
+  text-align: center;
+}
+
+.gpt-intro-message p {
+  color: #ececf1;
+  font-size: 16px;
+  margin: 0;
+  opacity: 0.8;
+  font-style: italic;
+}
+
 /* Perfect Simple GPT Cards */
 .gpt-gallery {
   display: grid;
@@ -1926,17 +1943,17 @@ body {
 
 @media (max-width: 768px) {
   .gpt-gallery {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 16px;
-    padding: 30px 16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 20px 12px;
   }
 }
 
 @media (max-width: 480px) {
   .gpt-gallery {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 20px 16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 16px 8px;
   }
 }
 
@@ -2198,13 +2215,28 @@ body {
 /* Mobile Responsive Styles for GPT and Admin */
 @media (max-width: 768px) {
   .gpt-gallery {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 16px 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 16px 12px;
   }
   
   .gpt-profile-card {
-  padding: 0;
+    padding: 0;
+    border-radius: 8px;
+  }
+  
+  .gpt-info {
+    padding: 12px;
+  }
+  
+  .gpt-name {
+    font-size: 16px;
+    margin: 0 0 6px 0;
+  }
+  
+  .gpt-description {
+    font-size: 13px;
+    line-height: 1.4;
   }
   
   .admin-content {
@@ -2221,20 +2253,50 @@ body {
 @media (max-width: 480px) {
   .gpt-library-page,
   .admin-panel-page {
-    padding: 16px;
+    padding: 12px 8px;
   }
   
-  .gpt-avatar {
-    width: 60px;
-    height: 60px;
+  .gpt-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 12px 6px;
+  }
+  
+  .gpt-info {
+    padding: 8px;
   }
   
   .gpt-name {
-    font-size: 16px;
+    font-size: 14px;
+    margin: 0 0 4px 0;
   }
   
   .gpt-description {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 375px) {
+  .gpt-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    padding: 10px 4px;
+  }
+  
+  .gpt-info {
+    padding: 6px;
+  }
+  
+  .gpt-name {
     font-size: 13px;
+    margin: 0 0 3px 0;
+  }
+  
+  .gpt-description {
+    font-size: 11px;
+    line-height: 1.2;
   }
 }
 

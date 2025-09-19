@@ -27,7 +27,7 @@ const mockMessages = {
     },
     { 
       role: 'assistant', 
-      content: "Here are my core technical skills:\n\n**💻 Programming & Frameworks**\n• Next.js, Node.js, React, React Native\n• Python, C++, Prisma\n• Full-stack web development\n\n**🗄️ Databases**\n• PostgreSQL, MySQL, MongoDB\n• Database design and optimization\n\n**🔐 Cybersecurity**\n• Penetration testing and vulnerability assessment\n• Red-team operations\n• eJPT Certification (eLearnSecurity Junior Penetration Tester)\n\n**🤖 AI & Machine Learning**\n• LLM fine-tuning and customization\n• Machine learning pipelines\n• AI-driven web applications\n\n**🛠️ Tools & Platforms**\n• Docker containerization\n• Linux (Arch, Kali)\n• Git version control\n• Cloud deployment and DevOps\n\n**🏆 Competition Achievements**\n• AI Competition Finalist, Cihan University\n• SulyCyberCon 2023 – 8th place nationwide\n• Iraq Ministry of Interior Cybersecurity Competition – National finalist\n• Digital Shortcut Hackathon (Asiacell) – 3rd place\n• Hurry Up Hackathon – Winner (2025)\n\n**🌐 Languages**\n• Arabic: Native\n• English: Good/Working proficiency" 
+      content: "Here are my core technical skills:\n\n**💻 Programming & Frameworks**\n• Next.js, Node.js, React, React Native\n• Python, C++, Prisma\n• Full-stack web development and mobile app\n\n**🗄️ Databases**\n• PostgreSQL, MySQL, MongoDB\n• Database design and optimization\n\n**🔐 Cybersecurity**\n• Penetration testing and vulnerability assessment\n• Red-team operations\n• eJPT Certification (eLearnSecurity Junior Penetration Tester)\n\n**🤖 AI & Machine Learning**\n• LLM fine-tuning and customization\n• Machine learning pipelines\n• AI-driven web applications\n\n**🛠️ Tools & Platforms**\n• Docker containerization\n• Linux (Arch, Kali)\n• Git version control\n• Cloud deployment and DevOps\n\n**🏆 Competition Achievements**\n• AI Competition Finalist, Cihan University\n• SulyCyberCon 2023 – 8th place nationwide\n• Iraq Ministry of Interior Cybersecurity Competition – National finalist\n• Digital Shortcut Hackathon (Asiacell) – 3rd place\n\n**🌐 Languages**\n• Arabic: Native\n• English: Good/Working proficiency" 
     }
   ],
   4: [ // Contact Info conversation
@@ -37,7 +37,7 @@ const mockMessages = {
     },
     { 
       role: 'assistant', 
-      content: "Feel free to reach out through any of these channels:\n\n**📧 Email**\n• othman.yehiaa@gmail.com\n• For professional inquiries and collaborations\n\n**📱 Phone**\n• +964 776 515 5920\n• Available for calls and WhatsApp\n\n**💼 Professional Networks**\n• LinkedIn: linkedin.com/in/othman-yehia-b37890377\n• Portfolio: othman.oyaps.com\n\n**📍 Location**\n• Based in Mosul, Iraq\n• Available for remote work and local projects\n\n**💬 Let's Connect!**\nI'm always interested in:\n• Cybersecurity collaboration opportunities\n• AI and machine learning projects\n• Full-stack development work\n• Tech community building in Iraq\n• Mentoring and knowledge sharing\n• Competition partnerships and CTF teams\n\nDon't hesitate to reach out if you want to discuss technology, explore collaborations, or learn more about the growing tech scene in Mosul!" 
+      content: "Feel free to reach out through any of these channels:\n\n**📧 Email**\n• [othman@oyaps.com](mailto:othman@oyaps.com)\n• [othman.yahya@ntu.edu.iq](mailto:othman.yahya@ntu.edu.iq)\n• For professional inquiries and collaborations\n\n**📱 Phone**\n• [+964 776 515 5920](tel:+9647765155920)\n• Available for calls and WhatsApp\n\n**💼 Professional Networks**\n• LinkedIn: [othman-yehia-b37890377](https://linkedin.com/in/othman-yehia-b37890377)\n• Portfolio: [othman.oyaps.com](https://othman.oyaps.com)\n\n**📱 Social Media**\n• Instagram: [@oth_ya](https://www.instagram.com/oth_ya?igsh=MXJpZ3gweTZicTBtYw%3D%3D&utm_source=qr)\n• OYAPS Channel: [OYAPS_iq](https://t.me/OYAPS_iq)\n\n**📍 Location**\n• Based in Mosul, Iraq\n• Available for remote work and local projects\n\n**💬 Let's Connect!**\nI'm always interested in:\n• Cybersecurity collaboration opportunities\n• AI and machine learning projects\n• Full-stack development work\n• Tech community building in Iraq\n• Mentoring and knowledge sharing\n• Competition partnerships and CTF teams\n\nDon't hesitate to reach out if you want to discuss technology, explore collaborations, or learn more about the growing tech scene in Mosul!" 
     }
   ]
 };
@@ -101,6 +101,13 @@ const initialGPTProfiles = [
     photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&h=800&fit=crop&crop=face&auto=format&q=90", 
     description: "Data scientist with expertise in Python, machine learning, and big data analytics. Research publication author and AI consultant.",
     specialties: ["Python", "Data Science", "Big Data"]
+  },
+  { 
+    id: 5, 
+    name: "Othman's Life GPT", 
+    photo: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=800&h=800&fit=crop&crop=face&auto=format&q=90", 
+    description: "This GPT holds the important moments and people in Othman's GPT life.",
+    specialties: ["Life Stories", "Personal Moments", "Memories"]
   }
 ];
 
@@ -114,17 +121,25 @@ function PlusIcon() {
 
 function SendIcon() {
   return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-      <path d="M7 11L12 6L17 11M12 18V7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-    </svg>
+    <img 
+      src="/send-alt-1-svgrepo-com.svg" 
+      alt="Send" 
+      width="16" 
+      height="16" 
+      style={{ filter: 'brightness(0) invert(1)' }}
+    />
   );
 }
 
 function CloseIcon() {
   return (
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-    </svg>
+    <img 
+      src="/exit-icon.svg" 
+      alt="Close" 
+      width="36" 
+      height="36" 
+      style={{ filter: 'brightness(0) invert(1)' }}
+    />
   );
 }
 
@@ -172,11 +187,15 @@ function ProjectIcon() {
   );
 }
 
-function ChatGPTLogo() {
+function OthmanLogo() {
   return (
-    <svg width="24" height="24" viewBox="0 0 41 41" fill="none">
-      <path d="M37.5324 16.8707C37.9808 15.5241 38.1363 14.0974 37.9886 12.6859C37.8409 11.2744 37.3934 9.91076 36.676 8.68622C35.6126 6.83404 33.9882 5.3676 32.0373 4.4985C30.0864 3.62941 27.9098 3.40259 25.8215 3.85078C24.8796 2.7893 23.7219 1.94125 22.4257 1.36341C21.1295 0.785575 19.7249 0.491269 18.3058 0.500197C16.1708 0.495044 14.0893 1.16803 12.3614 2.42214C10.6335 3.67624 9.34853 5.44666 8.6917 7.47815C7.30085 7.76286 5.98686 8.3414 4.8377 9.17505C3.68854 10.0087 2.73073 11.0782 2.02839 12.312C0.956464 14.1591 0.498905 16.2988 0.721698 18.4228C0.944492 20.5467 1.83612 22.5449 3.268 24.1293C2.81966 25.4759 2.66413 26.9026 2.81185 28.3141C2.95956 29.7256 3.40694 31.0892 4.12454 32.3138C5.18791 34.1659 6.81226 35.6322 8.76319 36.5013C10.7141 37.3704 12.8907 37.5973 14.9789 37.1492C15.9208 38.2107 17.0786 39.0587 18.3747 39.6366C19.6709 40.2144 21.0755 40.5087 22.4946 40.4998C24.6307 40.5054 26.7133 39.8321 28.4418 38.5772C30.1704 37.3223 31.4556 35.5506 32.1119 33.5179C33.5027 33.2332 34.8167 32.6547 35.9659 31.821C37.115 30.9874 38.0728 29.9178 38.7752 28.684C39.8458 26.8371 40.3023 24.6979 40.0789 22.5748C39.8556 20.4517 38.9639 18.4544 37.5324 16.8707ZM22.4978 37.8849C20.7443 37.8874 19.0459 37.2733 17.6994 36.1501C17.7601 36.117 17.8666 36.0586 17.936 36.0161L25.9004 31.4156C26.1003 31.3019 26.2663 31.137 26.3813 30.9378C26.4964 30.7386 26.5563 30.5124 26.5549 30.2825V19.0542L29.9213 20.998C29.9389 21.0068 29.9541 21.0198 29.9656 21.0359C29.977 21.052 29.9842 21.0707 29.9867 21.0902V30.3889C29.9842 32.375 29.1946 34.2791 27.7909 35.6841C26.3872 37.0892 24.4838 37.8806 22.4978 37.8849ZM6.39227 31.0064C5.51397 29.4888 5.19742 27.7107 5.49804 25.9832C5.55718 26.0187 5.66048 26.0818 5.73461 26.1244L13.699 30.7248C13.8975 30.8408 14.1233 30.902 14.3532 30.902C14.583 30.902 14.8088 30.8408 15.0073 30.7248L24.731 25.1103V28.9979C24.7321 29.0177 24.7283 29.0376 24.7199 29.0556C24.7115 29.0736 24.6988 29.0893 24.6829 29.1012L16.6317 33.7497C14.9096 34.7416 12.8643 35.0097 10.9447 34.4954C9.02506 33.9811 7.38785 32.7263 6.39227 31.0064ZM4.29707 13.6194C5.17156 12.0998 6.55279 10.9364 8.19885 10.3327C8.19885 10.4013 8.19491 10.5228 8.19491 10.6071V19.808C8.19351 20.0378 8.25334 20.2638 8.36823 20.4629C8.48312 20.6619 8.64893 20.8267 8.84863 20.9404L18.5723 26.5542L15.206 28.4979C15.1894 28.5089 15.1703 28.5155 15.1505 28.5173C15.1307 28.5191 15.1107 28.516 15.0924 28.5082L7.04046 23.8557C5.32135 22.8601 4.06716 21.2235 3.55289 19.3046C3.03862 17.3858 3.30624 15.3413 4.29707 13.6194ZM31.955 20.0556L22.2312 14.4411L25.5976 12.4981C25.6142 12.4872 25.6333 12.4805 25.6531 12.4787C25.6729 12.4769 25.6928 12.4801 25.7111 12.4879L33.7631 17.1364C34.9967 17.849 36.0017 18.8982 36.6606 20.1613C37.3194 21.4244 37.6047 22.849 37.4832 24.2684C37.3617 25.6878 36.8382 27.0432 35.9743 28.1759C35.1103 29.3086 33.9415 30.1717 32.6047 30.6641C32.6047 30.5947 32.6047 30.4733 32.6047 30.3889V21.188C32.6066 20.9586 32.5474 20.7328 32.4332 20.5338C32.319 20.3348 32.154 20.1698 31.955 20.0556ZM35.3055 15.0128C35.2464 14.9765 35.1431 14.9142 35.069 14.8717L27.1045 10.2712C26.906 10.1554 26.6803 10.0943 26.4504 10.0943C26.2206 10.0943 25.9948 10.1554 25.7963 10.2712L16.0726 15.8858V11.9982C16.0715 11.9783 16.0753 11.9585 16.0837 11.9405C16.0921 11.9225 16.1048 11.9068 16.1207 11.8949L24.1719 7.25025C25.4053 6.53903 26.8158 6.19376 28.2383 6.25482C29.6608 6.31589 31.0364 6.78077 32.2044 7.59508C33.3723 8.40939 34.2842 9.53945 34.8334 10.8531C35.3826 12.1667 35.5464 13.6095 35.3055 15.0128ZM14.2424 21.9419L10.8752 19.9981C10.8576 19.9893 10.8423 19.9763 10.8309 19.9602C10.8195 19.9441 10.8122 19.9254 10.8098 19.9058V10.6071C10.8107 9.18295 11.2173 7.78848 11.9819 6.58696C12.7466 5.38544 13.8377 4.42659 15.1275 3.82264C16.4173 3.21869 17.8524 2.99464 19.2649 3.1767C20.6775 3.35876 22.0089 3.93941 23.1034 4.85067C23.0427 4.88379 22.937 4.94215 22.8668 4.98473L14.9024 9.58517C14.7025 9.69878 14.5366 9.86356 14.4215 10.0626C14.3065 10.2616 14.2466 10.4877 14.2479 10.7175L14.2424 21.9419ZM16.071 17.9991L20.4018 15.4978L24.7325 17.9975V22.9985L20.4018 25.4983L16.071 22.9985V17.9991Z" fill="currentColor"/>
-    </svg>
+    <img 
+      src="/othman-logo.svg" 
+      alt="Othman's GPT" 
+      width="32" 
+      height="32" 
+      style={{ filter: 'brightness(0) invert(1)' }}
+    />
   );
 }
 
@@ -346,8 +365,8 @@ function Library({ selectedImage, onImageSelect, onImageClose, onToggleSidebar, 
           </div>
           <div className="header-center">
             <div className="chat-title-container">
-              <ChatGPTLogo />
-              <h1>ChatGPT</h1>
+              <OthmanLogo />
+              <h1>Othman's GPT</h1>
             </div>
           </div>
           <div className="header-right">
@@ -368,7 +387,6 @@ function Library({ selectedImage, onImageSelect, onImageClose, onToggleSidebar, 
             </svg>
           </div>
           <h1>Photo Gallery</h1>
-          <p>My personal photo collection - Click on any image to view it in full size</p>
         </div>
         
         <div className="library-gallery">
@@ -430,8 +448,8 @@ function GPTLibrary({ onToggleSidebar, onProfileClick, gptProfiles, onGPTSelect 
           </div>
           <div className="header-center">
             <div className="chat-title-container">
-              <ChatGPTLogo />
-              <h1>GPTs</h1>
+              <OthmanLogo />
+              <h1>Othman's GPT</h1>
             </div>
           </div>
           <div className="header-right">
@@ -442,6 +460,10 @@ function GPTLibrary({ onToggleSidebar, onProfileClick, gptProfiles, onGPTSelect 
             </button>
           </div>
         </div>
+      </div>
+      
+      <div className="gpt-intro-message">
+        <p>This GPT holds the important moments and people in Othman's GPT life.</p>
       </div>
       
       <div className="gpt-gallery">
@@ -506,7 +528,7 @@ function AdminLogin({ onAdminLogin }) {
     <div className="admin-login-container">
       <div className="admin-login-card">
         <div className="admin-login-header">
-          <ChatGPTLogo />
+          <OthmanLogo />
           <h1>Admin Login</h1>
           <p>Enter your credentials to manage GPT profiles</p>
         </div>
@@ -753,7 +775,7 @@ function AdminPanel({ onToggleSidebar, onProfileClick, gptProfiles, onAddGPT, on
           </div>
           <div className="header-center">
             <div className="chat-title-container">
-              <ChatGPTLogo />
+              <OthmanLogo />
               <h1>Admin Panel</h1>
             </div>
           </div>
@@ -1150,8 +1172,8 @@ function ChatArea({ selectedChat, onToggleSidebar, onProfileClick }) {
           </div>
           <div className="header-center">
             <div className="chat-title-container">
-              <ChatGPTLogo />
-              <h1>ChatGPT</h1>
+              <OthmanLogo />
+              <h1>Othman's GPT</h1>
             </div>
           </div>
           <div className="header-right">
@@ -1168,7 +1190,7 @@ function ChatArea({ selectedChat, onToggleSidebar, onProfileClick }) {
         {showWelcome ? (
           <div className="welcome-screen">
             <div className="welcome-content">
-              <ChatGPTLogo />
+              <OthmanLogo />
               <h2>How can I help you today?</h2>
             </div>
           </div>
@@ -1179,13 +1201,15 @@ function ChatArea({ selectedChat, onToggleSidebar, onProfileClick }) {
                 <div className="message-content">
                   {message.role === 'assistant' && (
                     <div className="message-avatar">
-                      <ChatGPTLogo />
+                      <OthmanLogo />
                     </div>
                   )}
                   <div className="message-text">
                     {message.content.split('\n').map((line, i) => {
                       // Handle bold text formatting
-                      const formattedLine = line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                      let formattedLine = line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                      // Handle markdown links [text](url)
+                      formattedLine = formattedLine.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
                       return (
                         <div key={i} dangerouslySetInnerHTML={{ __html: formattedLine }} />
                       );
@@ -1206,7 +1230,7 @@ function ChatArea({ selectedChat, onToggleSidebar, onProfileClick }) {
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder="Message ChatGPT"
+              placeholder="Message Othman's GPT"
               rows="1"
               className="chat-input"
             />
@@ -1220,7 +1244,7 @@ function ChatArea({ selectedChat, onToggleSidebar, onProfileClick }) {
           </div>
         </form>
         <div className="input-footer">
-          ChatGPT can make mistakes. Check important info.
+          Othman's GPT can make mistakes. Check important info.
         </div>
       </div>
     </div>
