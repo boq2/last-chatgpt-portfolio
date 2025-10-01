@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import './App.css';
 import AdminPanel from './components/admin/AdminPanel';
 import AdminLogin from './components/admin/AdminLogin';
-import AdminRegister from './components/admin/AdminRegister';
 import { useAuth } from '../hooks/useAuth';
 
 // ==================== CONSTANTS ====================
