@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import '../../app.css';
 
 const AdminLogin = ({ onLogin, onSwitchToRegister, error, loading }) => {
   const [credentials, setCredentials] = useState({ email: '', password: '' });

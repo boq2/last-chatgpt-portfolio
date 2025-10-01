@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import '../../app.css';
 const AdminRegister = ({ onRegister, onSwitchToLogin, error, loading }) => {
   const [formData, setFormData] = useState({
     name: 'Admin',
