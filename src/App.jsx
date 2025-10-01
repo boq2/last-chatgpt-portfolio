@@ -587,7 +587,7 @@ export default function App() {
   const [selectedChat, setSelectedChat] = useState(1);
   const [sidebarCollapsed, setSidebarCollapsed] = useResponsiveSidebar();
   const [showProfileModal, setShowProfileModal] = useState(false);
-  const [authMode, setAuthMode] = useState('login'); // 'login' or 'register'
+  const [authMode, setAuthMode] = useState('login');
 
   const { 
     isAuthenticated, 
@@ -599,6 +599,19 @@ export default function App() {
     register, 
     logout 
   } = useAuth();
+
+  // Fix mobile scroll by preventing body scroll
+  useEffect(() => {
+    if (currentView === 'chat' || currentView === 'gpts' || currentView === 'library') {
+      document.body.classList.add('chat-active');
+    } else {
+      document.body.classList.remove('chat-active');
+    }
+
+    return () => {
+      document.body.classList.remove('chat-active');
+    };
+  }, [currentView]);
 
   // Check for admin route on mount
   useEffect(() => {
