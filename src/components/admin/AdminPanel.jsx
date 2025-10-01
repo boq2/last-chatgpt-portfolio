@@ -1,7 +1,6 @@
 // src/components/AdminPanel.jsx
 import { useState, useEffect } from 'react';
 import appwriteService from '../../services/appwriteService';
-import '../../app.css';
 
 const AdminPanel = ({ onToggleSidebar, onProfileClick, onAdminLogout }) => {
   const [activeTab, setActiveTab] = useState('gpts');
