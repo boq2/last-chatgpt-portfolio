@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const AdminLogin = ({ onLogin, onSwitchToRegister, error, loading }) => {
+const AdminLogin = ({ onLogin, error, loading }) => {
   const [credentials, setCredentials] = useState({ email: '', password: '' });
 
   const handleSubmit = async (e) => {
@@ -66,14 +66,6 @@ const AdminLogin = ({ onLogin, onSwitchToRegister, error, loading }) => {
             {loading ? 'Signing In...' : 'Sign In'}
           </button>
           
-          <button 
-            type="button" 
-            className="admin-switch-btn" 
-            onClick={onSwitchToRegister}
-            disabled={loading}
-          >
-            Don't have an account? Register
-          </button>
         </form>
       </div>
     </div>
