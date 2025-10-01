@@ -127,7 +127,7 @@ const useResponsiveSidebar = () => {
 
 // ==================== HEADER COMPONENT ====================
 const Header = ({ onToggleSidebar, onProfileClick, title = "Othman's GPT" }) => (
-  <div className="chat-header">
+  <div className="chat-header" style={{ paddingTop: 'env(safe-area-inset-top)' }}>
     <div className="header-main">
       <div className="header-left">
         <button className="collapse-btn" onClick={onToggleSidebar}>
@@ -153,7 +153,7 @@ const Header = ({ onToggleSidebar, onProfileClick, title = "Othman's GPT" }) => 
 
 // ==================== SIDEBAR COMPONENT ====================
 const Sidebar = ({ onLibraryClick, onChatClick, currentView, selectedChat, onChatSelect, onProfileClick, onGPTClick, onAdminClick }) => (
-  <div className="sidebar">
+  <div className="sidebar" style={{ paddingTop: 'env(safe-area-inset-top)' }}>
     <div className="sidebar-header">
       <button className="new-chat-btn" onClick={onChatClick}>
         <Icons.Plus />
